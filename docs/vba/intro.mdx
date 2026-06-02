@@ -1,0 +1,82 @@
+---
+sidebar_position: 1
+---
+
+# VBA 简介
+
+**VBA（Visual Basic for Applications）** 是 Microsoft Office 内置的编程语言，可用于自动化 Excel、Word、Access 等 Office 应用程序中的重复性任务。
+
+## 什么是 VBA？
+
+VBA 是基于 Visual Basic 语言的一个子集，直接内嵌于 Office 套件中，无需额外安装即可使用。通过 VBA，你可以：
+
+- 自动化重复性操作，节省大量时间
+- 创建自定义函数扩展 Excel 功能
+- 操控工作表、单元格、图表等对象
+- 构建用户交互界面（UserForm）
+
+## 如何打开 VBA 编辑器？
+
+在 Excel 中，按下 `Alt + F11` 即可打开 **VBA 编辑器（VBE）**。
+
+也可以通过菜单：**开发工具 → Visual Basic** 进入。
+
+> 如果菜单中没有"开发工具"选项，需要先在 **文件 → 选项 → 自定义功能区** 中启用它。
+
+## 第一个 VBA 宏
+
+在 VBE 中插入一个模块，输入以下代码并运行：
+
+```vb
+Sub HelloWorld()
+    MsgBox "Hello, VBA World!"
+End Sub
+```
+
+按 `F5` 运行，你将看到一个弹出的消息框。
+
+## 基本语法概览
+
+```vb
+' 变量声明
+Dim name As String
+Dim count As Integer
+
+' 赋值
+name = "HaoYe"
+count = 10
+
+' 条件判断
+If count > 5 Then
+    MsgBox "大于 5"
+Else
+    MsgBox "不大于 5"
+End If
+
+' 循环
+Dim i As Integer
+For i = 1 To 10
+    Debug.Print i
+Next i
+```
+
+## 下一步
+
+继续浏览左侧目录，深入了解 VBA 的各项功能与实战技巧。
+
+The command also installs all necessary dependencies you need to run Docusaurus.
+
+## Start your site
+
+Run the development server:
+
+```bash
+cd my-website
+npm run start
+```
+
+The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+
+The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+
+Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
