@@ -36,7 +36,7 @@ The workflow will:
 
 - install dependencies with `npm ci`
 - build the site with `npm run build`
-- upload the generated `build` contents to `/www/wwwroot/haoyelaiga.com/docusite`
+- sync the generated `build` contents to `/www/wwwroot/haoyelaiga.com/docusite` with `rsync --delete`
 
 Required GitHub repository secrets:
 
