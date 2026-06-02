@@ -40,7 +40,4 @@ The workflow will:
 
 Required GitHub repository secrets:
 
-- `SERVER_HOST`
-- `SERVER_PORT`
-- `SERVER_USERNAME`
 - `SERVER_SSH_KEY`
