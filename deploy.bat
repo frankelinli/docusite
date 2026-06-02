@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ============================================
-echo   myLifeDocs Git 推送
+echo   myLifeDocs GitHub 推送
 echo ============================================
 echo.
 
@@ -22,14 +22,14 @@ git commit -m "🚀 deploy: %date% %time%" 2>nul
 echo ✅ 提交步骤完成
 echo.
 
-echo [3/3] 推送到服务器...
-git push server main
+echo [3/3] 推送到 GitHub...
+git push origin main
 if %errorlevel% neq 0 (
     echo ❌ 推送失败！
     pause
     exit /b 1
 )
 echo.
-echo ✅ docusite 推送完成！
+echo ✅ docusite 已推送到 GitHub，GitHub Actions 将自动构建并部署
 echo ============================================
 pause

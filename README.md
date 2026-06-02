@@ -26,16 +26,21 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
+This project is deployed by GitHub Actions.
 
 ```bash
-USE_SSH=true yarn deploy
+git push origin main
 ```
 
-Not using SSH:
+The workflow will:
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+- install dependencies with `npm ci`
+- build the site with `npm run build`
+- upload the generated `build` contents to `/www/wwwroot/haoyelaiga.com/docusite`
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Required GitHub repository secrets:
+
+- `SERVER_HOST`
+- `SERVER_PORT`
+- `SERVER_USERNAME`
+- `SERVER_SSH_KEY`
