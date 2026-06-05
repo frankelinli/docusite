@@ -4,6 +4,9 @@
 # Production
 /build
 
+# Deploy git repo (separate from source git)
+.deploy-git
+
 # Generated files
 .docusaurus
 .cache-loader
